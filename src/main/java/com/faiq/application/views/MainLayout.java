@@ -1,10 +1,10 @@
-package com.naufal.application.views;
+package com.faiq.application.views;
 
 
-import com.naufal.application.components.appnav.AppNav;
-import com.naufal.application.components.appnav.AppNavItem;
-import com.naufal.application.views.masterdetail.MasterDetailView;
-import com.naufal.application.views.masterdetail.Profil;
+import com.faiq.application.components.appnav.AppNav;
+import com.faiq.application.components.appnav.AppNavItem;
+import com.faiq.application.views.masterdetail.MasterDetailView;
+import com.faiq.application.views.masterdetail.Profil;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -39,7 +39,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void addDrawerContent() {
-        H1 appName = new H1("Obatin");
+        H1 appName = new H1("GOMOTOR");
         appName.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
         Header header = new Header(appName);
 
@@ -53,7 +53,7 @@ public class MainLayout extends AppLayout {
         // For documentation, visit https://github.com/vaadin/vcf-nav#readme
         AppNav nav = new AppNav();
 
-        nav.addItem(new AppNavItem("Pasien", MasterDetailView.class, "la la-columns"));
+        nav.addItem(new AppNavItem("Data Gejala", MasterDetailView.class, "la la-columns"));
         nav.addItem(new AppNavItem("Profil", Profil.class, "la la-columns"));
 
         return nav;

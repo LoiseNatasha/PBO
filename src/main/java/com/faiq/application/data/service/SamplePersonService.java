@@ -1,6 +1,6 @@
-package com.naufal.application.data.service;
+package com.faiq.application.data.service;
 
-import com.naufal.application.data.entity.SamplePerson;
+import com.faiq.application.data.entity.SamplePerson;
 
 import java.util.Optional;
 

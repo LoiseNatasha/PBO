@@ -1,4 +1,4 @@
-package com.naufal.application.data.entity;
+package com.faiq.application.data.entity;
 
 import java.time.LocalDate;
 import javax.persistence.Entity;

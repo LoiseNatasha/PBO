@@ -1,4 +1,4 @@
-package com.naufal.application.views;
+package com.faiq.application.views;
 
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -45,19 +45,11 @@ public class Dasboard extends AppLayout {
         horizontalLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.END);
 
         horizontalLayout.add(regis,Login);
-        H1 title = new H1("Obatin");
+        H1 title = new H1("GOMOTOR");
         title.getStyle().set("font-size", "var(--lumo-font-size-l)")
                 .set("margin", "var(--lumo-space-m)");
         addToNavbar(title, horizontalLayout);
 
-        Image gambar = new Image();
-        gambar.getStyle().set("font-size", "var(--lumo-font-size-l)")
-                .set("margin", "100px");
-        gambar.setSrc("https://publicdomainvectors.org/tn_img/publicdomainq-medicine-doctor-man-talking.webp");
-        gambar.setWidth("400px");
-        verticalLayout.setSizeFull();
-        verticalLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.CENTER);
-        verticalLayout.setAlignItems(FlexComponent.Alignment.END);
 
 
         Div div = new Div();
@@ -65,7 +57,5 @@ public class Dasboard extends AppLayout {
         div.setWidth("100%");
         div.setHeight("500px");
 
-        verticalLayout.add(gambar,div);
-        setContent(verticalLayout);
     }
 }

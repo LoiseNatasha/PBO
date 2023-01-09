@@ -1,8 +1,8 @@
-package com.naufal.application.views.masterdetail;
+package com.faiq.application.views.masterdetail;
 
-import com.naufal.application.views.MainLayout;
-import com.naufal.application.data.entity.SamplePerson;
-import com.naufal.application.data.service.SamplePersonService;
+import com.faiq.application.data.service.SamplePersonService;
+import com.faiq.application.views.MainLayout;
+import com.faiq.application.data.entity.SamplePerson;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -33,7 +33,7 @@ import java.util.Optional;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 
-@PageTitle("Monitoring Obat")
+@PageTitle("GOMOTOR")
 @Route(value = "master-detail/:samplePersonID?/:action?(edit)", layout = MainLayout.class)
 @RouteAlias(value = "Crud", layout = MainLayout.class)
 @Uses(Icon.class)
@@ -79,11 +79,10 @@ public class MasterDetailView extends Div implements BeforeEnterObserver {
         add(splitLayout);
 
         // Configure Grid
-        grid.addColumn("firstName").setHeader("Jenis Darah").setAutoWidth(true);
-        grid.addColumn("phone").setHeader("Nomer Hp").setAutoWidth(true);
-        grid.addColumn("lastName").setHeader("Jenis Obat").setAutoWidth(true);
-        grid.addColumn("role").setHeader("Dokter").setAutoWidth(true);
-        grid.addColumn("occupation").setHeader("Di minum").setAutoWidth(true);
+        grid.addColumn("firstName").setHeader("No").setAutoWidth(true);
+        grid.addColumn("phone").setHeader("Kode").setAutoWidth(true);
+        grid.addColumn("lastName").setHeader("Kerusakan").setAutoWidth(true);
+        grid.addColumn("role").setHeader("Relasi").setAutoWidth(true);
         LitRenderer<SamplePerson> importantRenderer = LitRenderer.<SamplePerson>of(
                 "<vaadin-icon icon='vaadin:${item.icon}' style='width: var(--lumo-icon-size-s); height: var(--lumo-icon-size-s); color: ${item.color};'></vaadin-icon>")
                 .withProperty("icon", important -> important.isImportant() ? "check" : "minus").withProperty("color",
@@ -91,7 +90,7 @@ public class MasterDetailView extends Div implements BeforeEnterObserver {
                                 ? "var(--lumo-primary-text-color)"
                                 : "var(--lumo-disabled-text-color)");
 
-        grid.addColumn(importantRenderer).setHeader("Tuntas").setAutoWidth(true);
+        grid.addColumn(importantRenderer).setHeader("Selesai").setAutoWidth(true);
 
         grid.setItems(query -> samplePersonService.list(
                 PageRequest.of(query.getPage(), query.getPageSize(), VaadinSpringDataHelpers.toSpringDataSort(query)))
@@ -170,13 +169,12 @@ public class MasterDetailView extends Div implements BeforeEnterObserver {
         editorLayoutDiv.add(editorDiv);
 
         FormLayout formLayout = new FormLayout();
-        firstName = new TextField("Nama Pasien");
-        phone = new TextField("Nomer Hp");
-        lastName = new TextField("Jenis Obat");
-        role = new TextField("Dokter");
-        occupation = new TextField("Di minum");
-        important = new Checkbox("Tuntas");
-        formLayout.add(firstName, phone, lastName,role,occupation, important);
+        firstName = new TextField("No");
+        phone = new TextField("Kode");
+        lastName = new TextField("Kerusakan");
+        role = new TextField("Relasi");
+        important = new Checkbox("Selesai");
+        formLayout.add(firstName, phone, lastName,role, important);
 
         editorDiv.add(formLayout);
         createButtonLayout(editorLayoutDiv);

@@ -1,6 +1,6 @@
-package com.naufal.application.views.masterdetail;
+package com.faiq.application.views.masterdetail;
 
-import com.naufal.application.views.MainLayout;
+import com.faiq.application.views.MainLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 

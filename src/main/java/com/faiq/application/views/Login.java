@@ -1,4 +1,4 @@
-package com.naufal.application.views;
+package com.faiq.application.views;
 
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.login.LoginForm;

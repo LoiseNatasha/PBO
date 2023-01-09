@@ -1,6 +1,6 @@
-package com.naufal.application;
+package com.faiq.application;
 
-import com.naufal.application.data.service.SamplePersonRepository;
+import com.faiq.application.data.service.SamplePersonRepository;
 import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.theme.Theme;

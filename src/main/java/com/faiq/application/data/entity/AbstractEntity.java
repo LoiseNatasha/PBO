@@ -1,4 +1,4 @@
-package com.sidora.application.data.entity;
+package com.faiq.application.data.entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

@@ -1,4 +1,4 @@
-package com.naufal.application.components.appnav;
+package com.faiq.application.components.appnav;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasSize;
